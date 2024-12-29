@@ -1,0 +1,60 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.1'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.plugin:spring-plugin-core:2.0.0.RELEASE'
+
+	implementation 'com.baomidou:mybatis-plus-spring-boot3-starter:3.5.5'
+
+
+//	implementation 'com.alibaba:fastjson:1.2.70'
+
+	implementation 'com.alibaba:druid-spring-boot-3-starter:1.2.21'
+
+	implementation 'org.flywaydb:flyway-core:9.22.2'
+	implementation 'org.flywaydb:flyway-mysql:9.22.2'
+
+
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+//			让响应结果更美观
+	implementation 'com.alibaba.cola:cola-component-dto:4.3.2'
+
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+
+}
+//
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}

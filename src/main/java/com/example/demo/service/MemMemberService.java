@@ -2,6 +2,8 @@ package com.example.demo.service;
 
 import com.example.demo.entity.MemMember;
 
+import java.util.List;
+
 public interface MemMemberService {
     boolean save(MemMember member);
 
@@ -10,4 +12,6 @@ public interface MemMemberService {
     boolean update(MemMember member);
 
     boolean deleteById(String id);
+
+    List<MemMember> getAll();
 }

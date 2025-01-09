@@ -6,6 +6,8 @@ import com.example.demo.service.MemMemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 public class MemMemberServiceImpl extends BaseService<MemMemberMapper, MemMember> implements MemMemberService {
@@ -27,5 +29,10 @@ public class MemMemberServiceImpl extends BaseService<MemMemberMapper, MemMember
     @Override
     public boolean deleteById(String id) {
         return super.removeById(id);
+    }
+
+    @Override
+    public List<MemMember> getAll() {
+        return super.list();
     }
 }

@@ -35,4 +35,6 @@ public class MemMemberServiceImpl extends BaseService<MemMemberMapper, MemMember
     public List<MemMember> getAll() {
         return super.list();
     }
+
+    
 }

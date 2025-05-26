@@ -30,6 +30,7 @@ dependencies {
 	implementation 'org.springframework.plugin:spring-plugin-core:2.0.0.RELEASE'
 
 	implementation 'com.baomidou:mybatis-plus-spring-boot3-starter:3.5.5'
+	
 
 
 //	implementation 'com.alibaba:fastjson:1.2.70'
